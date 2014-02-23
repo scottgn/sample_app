@@ -28,11 +28,11 @@ describe "Static pages" do
   end
 
   describe "About page" do
-  	it "should have the content 'About Us'" do
-  		visit '/static_pages/about'
-  		expect(page).to have_content('About Us')
-  	end
-
+    it "should have the content 'About Us'" do
+      visit '/static_pages/about'
+      expect(page).to have_content('About Us')
+    end    
+    
   	it "should have the right title" do
 		  visit '/static_pages/about'
 		  expect(page).to have_title("#{base_title} | About Us")
