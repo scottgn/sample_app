@@ -35,7 +35,7 @@ guard 'rspec', all_after_pass: false, cmd: 'rspec --drb -c' do
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 
-  # notification :gntp, host: '127.0.0.1'
-  notification :terminal_notifier
+  notification :gntp, host: '127.0.0.1'
+  # notification :terminal_notifier
 end
 
